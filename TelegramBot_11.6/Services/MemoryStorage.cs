@@ -17,7 +17,7 @@ namespace TelegramBot_11._6.Services
             if(_sessinons.ContainsKey(ChatId))
                 return _sessinons[ChatId];
 
-            var newSession = new Session() { UserInput = "sum"};
+            var newSession = new Session() { UserInput = ""};
             _sessinons.TryAdd(ChatId, newSession);
             return newSession;
         }
