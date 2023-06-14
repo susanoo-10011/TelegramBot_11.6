@@ -45,7 +45,7 @@ namespace TelegramBot_11._6
         {
             return new AppSettings
             {
-                BotToken = "6121559430:AAHAb0toV6uSF6s0YyUkHzAuQlS7s1H64PU",
+                BotToken = "",
             };
         }
     }
