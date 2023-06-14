@@ -6,15 +6,15 @@ namespace TelegramBot_11._6.Utilities
     {
         public static string Sum(string text )
         {
-            int summ = 0;
-            for (int i = 0; i < text.Length; i++)
+            string[] numbers = text.Split(' ');
+
+            int sum = 0;
+
+            foreach (string number in numbers)
             {
-                if (char.IsNumber(text[i]))
-                {
-                    summ += Convert.ToInt32(text[i].ToString());
-                }
+                sum += int.Parse(number);
             }
-            return summ.ToString();
+            return sum.ToString();
         }
 
 
