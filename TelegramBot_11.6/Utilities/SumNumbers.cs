@@ -1,22 +1,20 @@
-﻿using TelegramBot_11._6.Services;
-
-namespace TelegramBot_11._6.Utilities
+﻿namespace TelegramBot_11._6.Utilities
 {
     public static class SumNumbers
     {
-        public static string Sum(string text )
+        public static string Sum(string text)
         {
-            int summ = 0;
-            for (int i = 0; i < text.Length; i++)
+            string[] numbers = text.Split(' ');
+
+            int sum = 0;
+
+            foreach (string number in numbers)
             {
-                if (char.IsNumber(text[i]))
-                {
-                    summ += Convert.ToInt32(text[i].ToString());
-                }
+                int parsedNumber;
+                if (int.TryParse(number, out parsedNumber))
+                    sum += parsedNumber;
             }
-            return summ.ToString();
+            return sum.ToString();
         }
-
-
     }
 }
